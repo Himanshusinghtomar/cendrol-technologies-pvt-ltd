@@ -8,15 +8,14 @@ function Card() {
     const [category, setCategory] = useState('animal');
 
     useEffect(() => {
-        const getData = () => {
+        
         fetch("https://api.chucknorris.io/jokes/categories").then((result) => {
             result.json().then((resp) =>{  
                 setData(resp)
                 console.log(resp)
             })
-        })}
+        })
 
-        return () => getData()
     },[category])
           
   return (
