@@ -12,7 +12,7 @@ function Card() {
         fetch("https://api.chucknorris.io/jokes/categories").then((result) => {
             result.json().then((resp) =>{  
                 setData(resp)
-                console.log(resp)
+               
             })
         })
 
